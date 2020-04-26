@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const hashPassword = (req, res, next) => {
 	let user = req.body;
 
-	const hash = bcrypt.hashSync(user.password, 10);
+	const hash = bcrypt.hashSync(user.password, 14);
 	user.password = hash;
 	next();
 };
