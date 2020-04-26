@@ -2,7 +2,6 @@ const server = require("express")();
 const json = require("express").json();
 const helmet = require("helmet")();
 const cors = require("cors")();
-const jwt = "jsonwebtoken";
 
 server.use(json, helmet, cors);
 
