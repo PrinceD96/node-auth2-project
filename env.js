@@ -4,5 +4,5 @@ module.exports = {
 	DB_URL: process.env.DB_URL,
 	PORT: process.env.PORT,
 	DB_ENV: process.env.DB_ENV,
-	JWT_SECRET: process.env.JWT_SECRET
+	JWT_SECRET: process.env.JWT_SECRET || "My secret is not a secret"
 };
