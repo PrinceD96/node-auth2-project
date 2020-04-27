@@ -23,7 +23,7 @@ const validatePassword = (req, res, next) => {
 		.first()
 		.then(user => {
 			if (user && bcrypt.compareSync(password, user.password)) {
-				req.response = user;
+				req.session.user = username;
 				next();
 			} else {
 				res.status(401).json({ message: "Invalid Credentials" });
