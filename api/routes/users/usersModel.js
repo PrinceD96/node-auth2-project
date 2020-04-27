@@ -12,6 +12,12 @@ const findById = id => {
 	return db("users").where({ id }).first();
 };
 
+const findByDept = department => {
+	return db("users")
+		.select("id", "username", "department")
+		.where({ department });
+};
+
 const add = user => {
 	return db("users")
 		.insert(user)
@@ -30,6 +36,7 @@ module.exports = {
 	find,
 	findBy,
 	findById,
+	findByDept,
 	add,
 	update,
 	remove
