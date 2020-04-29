@@ -4,6 +4,7 @@ const Users = require("./usersModel");
 // Gets all users within the same department
 
 router.get("/", (req, res) => {
+	console.log(req.decodedToken);
 	const { department } = req.decodedToken;
 	Users.findByDept(department)
 		.then(users => {

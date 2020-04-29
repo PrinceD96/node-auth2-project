@@ -13,6 +13,7 @@ const findById = id => {
 };
 
 const findByDept = department => {
+	console.log(department);
 	return db("users")
 		.select("id", "username", "department")
 		.where({ department });

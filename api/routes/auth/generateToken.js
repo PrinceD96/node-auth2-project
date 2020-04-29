@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../../../env");
 
 module.exports = user => {
+	console.log(user);
 	const payload = {
 		...user
 	};
